@@ -11,22 +11,6 @@
 }
 
 :root {
-
-
-  /* --color-bg-variant: #5A0B4D;
-  --color-prinary: #A1EF8B;
-  --color-primary-variant: #772D8B;
-  --color-white: #D3F6DB;
-  --color-light: #A1EF8B; */
-
-
-/* 
-  --color-bg-variant: #820933;
-  --color-prinary: #D84797;
-  --color-primary-variant: #3ABEFF;
-  --color-white: #D2FDFF;
-  --color-light: #26FFE6; */
-
 --color-bg-variant: #2c2c6c;
   --color-prinary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
