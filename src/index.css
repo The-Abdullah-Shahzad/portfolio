@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -11,13 +11,18 @@
 }
 
 :root {
---color-bg-variant: #2c2c6c;
-  --color-prinary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
-  --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6); 
-
-  --color-bg: #010325;
+  --color-bg-variant: #1e293b;
+  --color-primary: #06b6d4;
+  --color-primary-variant: rgba(6, 182, 212, 0.4);
+  --color-white: #ffffff;
+  --color-light: rgba(255, 255, 255, 0.8);
+  --color-dark: #0f172a;
+  --color-bg: #020617;
+  --color-gray: #475569;
+  --color-gray-light: #64748b;
+  --color-teal-light: #ecfeff;
+  --color-teal-dark: #0891b2;
+  --color-blue-dark: #1e40af;
 
   --transition: all 400ms ease;
 
@@ -31,14 +36,28 @@ html {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-teal-dark);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
+  font-weight: 400;
 }
 
 /* ========================= General Styles =========================== */
@@ -47,19 +66,33 @@ body {
   width: var(--container-width-lg);
   margin: 0 auto;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 1.2;
 }
+
 h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
   font-size: 2.5rem;
+  font-weight: 600;
 }
 
 section {
   margin-top: 8rem;
+  padding: 2rem 0;
 }
 
 section > h2,
@@ -69,8 +102,21 @@ section > h5 {
 }
 
 section > h2 {
-  color: var(--color-prinary);
+  color: var(--color-primary);
   margin-bottom: 3rem;
+  position: relative;
+}
+
+section > h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
 }
 
 .text-light {
@@ -78,33 +124,48 @@ section > h2 {
 }
 
 a {
-  color: var(--color-prinary);
+  color: var(--color-primary);
   transition: var(--transition);
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--color-white);
 }
+
 .btn {
   width: max-content;
   display: inline-block;
-  color: var(--color-prinary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   cursor: pointer;
-  border: 1px solid var(--color-prinary);
+  border: 2px solid var(--color-primary);
   transition: var(--transition);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
 }
-.btn :hover {
-  background: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+
+.btn:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
 }
 
 .btn-primary {
-  background: var(--color-prinary);
-  color: var(--color-bg);
+  background: var(--color-primary);
+  color: var(--color-white);
 }
+
+.btn-primary:hover {
+  background: var(--color-teal-dark);
+  border-color: var(--color-teal-dark);
+}
+
 img {
   display: block;
   width: 100%;
@@ -119,7 +180,10 @@ img {
 
   section {
     margin-top: 6rem;
-    /* height: 100vh; */
+  }
+  
+  h1 {
+    font-size: 2.8rem;
   }
 }
 
@@ -131,5 +195,13 @@ img {
 
   section {
     margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
   }
 }

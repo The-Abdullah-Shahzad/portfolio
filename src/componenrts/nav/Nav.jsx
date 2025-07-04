@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Nav.css";
-import {AiOutlineHome, AiOutlineUser, AiOutlineBook, AiOutlineCustomerService, AiOutlineMessage} from 'react-icons/ai'
-import {GrProjects} from 'react-icons/gr'
+import {AiOutlineHome, AiOutlineUser, AiOutlineBook, AiOutlineCustomerService, AiOutlineMessage, AiOutlineAppstore} from 'react-icons/ai'
 import { useState } from 'react';
 
 const Nav = () => {
@@ -12,6 +11,7 @@ const Nav = () => {
       <a onClick={()=> setActive('#about')} className = {Active === '#about' ? 'active' : ''} href='#about'><AiOutlineUser/></a>
       <a onClick={()=> setActive('#experience')} className = {Active === '#experience' ? 'active' : ''} href='#experience'><AiOutlineBook/></a>
       <a onClick={()=> setActive('#services')} className = {Active === '#services' ? 'active' : ''} href='#services'><AiOutlineCustomerService/></a>
+      <a onClick={()=> setActive('#portfolio')} className = {Active === '#portfolio' ? 'active' : ''} href='#portfolio'><AiOutlineAppstore/></a>
       <a onClick={()=> setActive('#contact')} className = {Active === '#contact' ? 'active' : ''} href='#contact'><AiOutlineMessage/></a>
     </nav>
   )

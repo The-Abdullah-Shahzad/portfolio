@@ -20,32 +20,37 @@ const About = () => {
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>November  2022 till Now<br/>Gigalabs</small>
+              <small>3+ Years<br/>Full-Stack Development</small>
             </article>
             <article className="about_card">
               <GiGraduateCap className="about_icon" />
-              <h5>Degree</h5>
-              <small>BS CS <br/>Comsats University Lahore</small>
+              <h5>Education</h5>
+              <small>BS Computer Science<br/>COMSATS University</small>
             </article>
             <article className="about_card">
               <FaFolderOpen className="about_icon" />
               <h5>Projects</h5>
-              <small>6 projects</small>
+              <small>15+ Completed<br/>Web & Mobile Apps</small>
             </article>
            
           </div>
             <p>
-              My Name is Muhammad Abdullah Shahzad. i'm a BSCS graduate from Comsats University Lahore Campus. 
-              I specialize in Web development and am always eager to learn new techniques and technologies. 
-              I'm also passionate about graphic designing, I love to think of new ideas and designs to implement. 
-              I also design posters and logos. I have worked on a number of projects during my University
-              time that include web projects, java, python and graphic designing projects. 
-              After my graduation now I want to work with a professional organization to enhance my skills 
-              to a professional level and gain as much experience as I can. I'm a hardworker with problem
-              solving and good communication skills. To reach out to me click on the button below.
+              I'm Abdullah Shahzad, a passionate Full-Stack Software Engineer with expertise in modern web technologies. 
+              I specialize in building scalable applications using React, Node.js, and cloud platforms. 
+              With a strong foundation in both frontend and backend development, I create seamless user experiences 
+              and robust server-side solutions.
+            </p>
+            <p>
+              My journey in software development started during my university years, where I worked on various projects 
+              ranging from e-commerce platforms to real-time messaging applications. I'm particularly interested in 
+              cloud architecture, API design, and creating intuitive user interfaces that solve real-world problems.
+            </p>
+            <p>
+              When I'm not coding, I enjoy staying updated with the latest tech trends, contributing to open-source projects, 
+              and mentoring junior developers. I believe in writing clean, maintainable code and following industry best practices.
             </p>
             <a href="#contact" className="btn btn-primary">
-              Lets Talk
+              Let's Connect
             </a>
         </div>
       </div>
