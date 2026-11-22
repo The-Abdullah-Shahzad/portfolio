@@ -1,26 +1,28 @@
-import React from 'react'
-import Header from './componenrts/header/Header'
-import Nav from './componenrts/nav/Nav'
-import About from './componenrts/about/About'
-import Experience from './componenrts/experience/Experience'
-import Services from './componenrts/services/Services'
-import Portfolio from './componenrts/portfolio/Portfolio'
-import Footer from '../src/componenrts/footer/Footer'
-import Contact from '../src/componenrts/contact/Contact'
+import React from 'react';
+import Header from './componenrts/header/Header';
+import Nav from './componenrts/nav/Nav';
+import About from './componenrts/about/About';
+import Experience from './componenrts/experience/Experience';
+import Toolkit from './componenrts/experience/Toolkit';
+import Portfolio from './componenrts/portfolio/Portfolio';
+import Footer from './componenrts/footer/Footer';
+import Contact from './componenrts/contact/Contact';
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <Header/>
-      <Nav/>
-      <About/>
-      <Experience/>
-      <Services/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-    </div>
-  )
+    <>
+      <div id="top" />
+      <a className="skip-link" href="#main">Skip to content</a>
+      <Nav />
+      <main id="main" tabIndex={-1}>
+        <Header />
+        <Portfolio />
+        <Experience />
+        <About />
+        <Toolkit />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }
-
-export default App

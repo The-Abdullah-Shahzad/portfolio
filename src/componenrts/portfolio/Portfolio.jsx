@@ -1,68 +1,90 @@
-import React from 'react'
-import './Portfolio.css';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import React from 'react';
+import { FiBarChart2, FiClipboard, FiGithub, FiLayers, FiMonitor, FiSend, FiUsers } from 'react-icons/fi';
+import { profile } from '../../profile';
 
-const Portfolio = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include payment processing, inventory management, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "https://github.com/yourusername/ecommerce",
-      live: "https://ecommerce-demo.com"
-    },
-    {
-      id: 2,
-      title: "Real-Time Chat App",
-      description: "React Native mobile app with real-time messaging capabilities. Includes WebSocket integration, push notifications, and file sharing.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["React Native", "WebSocket", "Firebase", "Node.js"],
-      github: "https://github.com/yourusername/chat-app",
-      live: "https://chat-app-demo.com"
-    },
-    {
-      id: 3,
-      title: "Task Management System",
-      description: "Next.js application with TypeScript and Tailwind CSS. Features drag-and-drop interface, team collaboration, and calendar integration.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"],
-      github: "https://github.com/yourusername/task-manager",
-      live: "https://task-manager-demo.com"
-    }
-  ];
+const projects = [
+  {
+    title: 'GPI Survey Builder',
+    kind: 'Multi-tenant SaaS',
+    description: 'Lead frontend architecture for the admin portal, survey builder, reporting dashboard, and respondent app. Shared components and design tokens keep the experience consistent across all four.',
+    stack: ['React', 'TypeScript', 'RTK Query', 'NestJS', 'PostgreSQL'],
+    theme: 'survey',
+    Icon: FiBarChart2,
+  },
+  {
+    title: 'Flavorwiki Email Tool',
+    kind: 'Marketing operations',
+    description: 'Built a campaign platform that imports 100,000+ CSV records with live progress, processes them in a rate-limited queue, and tracks opens, clicks, and bounces via SendGrid.',
+    stack: ['React', 'NestJS', 'MySQL', 'RTK Query', 'WebSockets', 'SendGrid'],
+    theme: 'email',
+    Icon: FiSend,
+  },
+  {
+    title: 'Inventory Management System',
+    kind: 'Inventory operations',
+    description: 'Delivered stock tracking, vendor management, shipment logging, and auditing. Designed an indexed PostgreSQL schema and built search and filtering for large inventories.',
+    stack: ['React', 'NestJS', 'PostgreSQL', 'Redux-Saga', 'MUI'],
+    theme: 'inventory',
+    Icon: FiLayers,
+  },
+  {
+    title: 'Flavorwiki Operator App',
+    kind: 'Survey operations',
+    description: 'Built and optimized UI components, added form validation, and contributed to MongoDB data modeling and GraphQL query optimization.',
+    stack: ['React', 'Node.js', 'GraphQL', 'MongoDB', 'Ant Design', 'Formik', 'Yup'],
+    theme: 'operator',
+    Icon: FiClipboard,
+  },
+  {
+    title: 'Flavorwiki Sensory App',
+    kind: 'Sensory research',
+    description: 'Built the responsive frontend from Figma, created a reusable component library, and managed API requests with RTK Query.',
+    stack: ['React', 'RTK Query', 'Styled Components', 'Ant Design'],
+    theme: 'sensory',
+    Icon: FiUsers,
+  },
+  {
+    title: 'RFM Merchant Portal',
+    kind: 'Merchant dashboard',
+    description: 'Developed a mobile-first dashboard for merchants to manage rental machines.',
+    stack: ['React', 'Ant Design', 'RTK Query', 'Styled Components'],
+    theme: 'merchant',
+    Icon: FiMonitor,
+  },
+];
 
+function ProjectCard({ title, kind, description, stack, theme, Icon }) {
   return (
-    <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
-      <div className="container portfolio_container">
-        {projects.map((project) => (
-          <article key={project.id} className="portfolio_item">
-            <div className="portfolio_item_image">
-              <img src={project.image} alt={project.title} />
-            </div>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="portfolio_item_technologies">
-              {project.technologies.map((tech, index) => (
-                <span key={index} className="technology_tag">{tech}</span>
-              ))}
-            </div>
-            <div className="portfolio_item_cta">
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn">
-                <FaGithub /> GitHub
-              </a>
-              <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                <FaExternalLinkAlt /> Live Demo
-              </a>
-            </div>
-          </article>
-        ))}
+    <article className="project">
+      <div className={'project-art art-' + theme} aria-hidden="true">
+        <div className="art-window">
+          <div className="art-bar"><i /><i /><i /></div>
+          <div className="art-body"><Icon /><div className="art-lines"><i /><i /><i /></div></div>
+        </div>
+      </div>
+      <div className="project-content">
+        <p className="eyebrow">{kind}</p>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <ul className="tags" aria-label="Technologies">
+          {stack.map((tech) => <li key={tech}>{tech}</li>)}
+        </ul>
+      </div>
+    </article>
+  );
+}
+
+export default function Portfolio() {
+  return (
+    <section id="portfolio" className="section container" aria-labelledby="work-title" tabIndex={-1}>
+      <span id="services" className="section-anchor" aria-hidden="true" />
+      <div className="section-heading">
+        <h2 id="work-title">Projects<span>.</span></h2>
+        <a className="text-link" href={profile.github}><FiGithub aria-hidden="true" /> Browse GitHub</a>
+      </div>
+      <div className="project-grid">
+        {projects.map((project) => <ProjectCard key={project.title} {...project} />)}
       </div>
     </section>
   );
-};
-
-export default Portfolio;
+}

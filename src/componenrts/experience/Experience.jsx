@@ -1,135 +1,48 @@
-import React from "react";
-import "./Experience.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React from 'react';
 
-const Experience = () => {
+const roles = [
+  {
+    company: 'Codebricks Pvt Ltd',
+    start: '2025-12',
+    startLabel: 'Dec 2025',
+    highlights: [
+      'Lead frontend architecture for client-facing SaaS products, with a focus on reusable components, state management, and API integration.',
+      'Work with product stakeholders on feature requirements and help improve code quality through peer reviews and CI practices.',
+    ],
+  },
+  {
+    company: 'Giglabs Pvt Ltd',
+    start: '2021-11',
+    startLabel: 'Nov 2021',
+    end: '2025-12',
+    endLabel: 'Dec 2025',
+    highlights: [
+      'Built full-stack features for 7+ client projects across inventory, e-commerce, marketing operations, and service portals.',
+      'Designed a queue-based CSV import pipeline with live WebSocket progress, optimized PostgreSQL queries, and integrated SendGrid campaign events.',
+    ],
+  },
+];
+
+export default function Experience() {
   return (
-    <section id="experience">
-      <h5>What Skills I Have</h5>
-      <h2>My Expertise</h2>
-      <div className="container experience_container">
-        <div className="experience_frontend">
-          <h3>Frontend Development</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>React.js</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>TypeScript</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Next.js</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Redux Toolkit</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Tailwind CSS</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Material-UI</h4>
-            </article>
-          </div>
-        </div>
-
-        <div className="experience_backend">
-          <h3>Backend Development</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Node.js</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Express.js</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>NestJS</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>PostgreSQL</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>MongoDB</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Redis</h4>
-            </article>
-          </div>
-        </div>
-
-        <div className="experience_frontend">
-          <h3>DevOps & Tools</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Docker</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>AWS</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Git & GitHub</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>CI/CD</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Jest Testing</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Postman</h4>
-            </article>
-          </div>
-        </div>
-
-        <div className="experience_frontend">
-          <h3>Mobile & Others</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>React Native</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Firebase</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>GraphQL</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>REST APIs</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>WebSocket</h4>
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Agile/Scrum</h4>
-            </article>
-          </div>
-        </div>
+    <section id="experience" className="section container experience-section" aria-labelledby="experience-title" tabIndex={-1}>
+      <div className="section-heading">
+        <h2 id="experience-title">Experience<span>.</span></h2>
       </div>
+      <ol className="career-list">
+        {roles.map(({ company, start, startLabel, end, endLabel, highlights }) => (
+          <li className="career-entry" key={company}>
+            <div>
+              <p className="career-date">
+                <time dateTime={start}>{startLabel}</time> – {end ? <time dateTime={end}>{endLabel}</time> : 'Present'}
+              </p>
+              <h3>{company}</h3>
+              <p className="career-title">Software Engineer</p>
+            </div>
+            <ul className="career-highlights">{highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
+          </li>
+        ))}
+      </ol>
     </section>
   );
-};
-
-export default Experience;
+}
