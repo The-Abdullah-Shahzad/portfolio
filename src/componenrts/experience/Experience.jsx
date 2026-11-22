@@ -1,159 +1,48 @@
-import React from "react";
-import "./Experience.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React from 'react';
 
-const Experience = () => {
+const roles = [
+  {
+    company: 'Codebricks Pvt Ltd',
+    start: '2025-12',
+    startLabel: 'Dec 2025',
+    highlights: [
+      'Lead frontend architecture for client-facing SaaS products, with a focus on reusable components, state management, and API integration.',
+      'Work with product stakeholders on feature requirements and help improve code quality through peer reviews and CI practices.',
+    ],
+  },
+  {
+    company: 'Giglabs Pvt Ltd',
+    start: '2021-11',
+    startLabel: 'Nov 2021',
+    end: '2025-12',
+    endLabel: 'Dec 2025',
+    highlights: [
+      'Built full-stack features for 7+ client projects across inventory, e-commerce, marketing operations, and service portals.',
+      'Designed a queue-based CSV import pipeline with live WebSocket progress, optimized PostgreSQL queries, and integrated SendGrid campaign events.',
+    ],
+  },
+];
+
+export default function Experience() {
   return (
-    <section id="experience">
-      <h5>What Skills I have?</h5>
-      <h2>My Skills</h2>
-      <div className="container experience_container">
-        <div className="experience_frontend">
-          <h3>FrontEnd Development</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>HTML</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>CSS</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>EJS</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>React JS</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Redux Saga</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Material UI</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-          </div>
-        </div>
-
-        <div className="experience_backend">
-          <h3>BackEnd Development</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Nodejs</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Nest JS</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>MongoDB</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>PostgreSql</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Firebase</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Type ORM</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-          </div>
-        </div>
-
-        <div className="experience_frontend">
-          <h3>Languages</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>C</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>C++</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Java</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Python</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>React Native</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-          </div>
-        </div>
-
-        <div className="experience_frontend">
-          <h3>Softwares</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>MS Word</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>MS Excel</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>MS Powerpoint</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>MS Visio</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>VS Code</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Github</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-            <article className="experience_details">
-              <BsFillPatchCheckFill className="experience_details-icon" />
-              <h4>Adobe Illustrator</h4>
-              {/* <small className='text-light'>Experienced</small> */}
-            </article>
-          </div>
-        </div>
+    <section id="experience" className="section container experience-section" aria-labelledby="experience-title" tabIndex={-1}>
+      <div className="section-heading">
+        <h2 id="experience-title">Experience<span>.</span></h2>
       </div>
+      <ol className="career-list">
+        {roles.map(({ company, start, startLabel, end, endLabel, highlights }) => (
+          <li className="career-entry" key={company}>
+            <div>
+              <p className="career-date">
+                <time dateTime={start}>{startLabel}</time> – {end ? <time dateTime={end}>{endLabel}</time> : 'Present'}
+              </p>
+              <h3>{company}</h3>
+              <p className="career-title">Software Engineer</p>
+            </div>
+            <ul className="career-highlights">{highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
+          </li>
+        ))}
+      </ol>
     </section>
   );
-};
-
-export default Experience;
+}

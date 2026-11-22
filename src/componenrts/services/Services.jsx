@@ -2,82 +2,80 @@ import React from 'react'
 import "./Services.css";
 import {BsCheck} from 'react-icons/bs';
 
-
 const Services = () => {
   return (
     <section id = "services"> 
-    <h5>Here are</h5>
+    <h5>Featured</h5>
     <h2>My Projects</h2>
     <div className='container service_container'>
       <article className='service'>
         <div className="service_head">
-          <h3>Graphic Designing</h3>
+          <h3>E-Commerce Platform</h3>
         </div>
         <ul className='service_list'>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>UI/UX design of my FYP using Figma</p>
+            <p>Full-stack e-commerce solution with React, Node.js, and PostgreSQL</p>
           </li>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>Poster to aware people about managing e-waste Using Illustrator</p>
+            <p>Integrated payment processing with Stripe API</p>
           </li>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>Designed a logo for a company called LahoreSign</p>
+            <p>Real-time inventory management and order tracking</p>
+          </li>
+          <li>
+            <BsCheck className='service_list-icon'/>
+            <p>Admin dashboard with analytics and reporting</p>
           </li>
         </ul>
       </article>
 
       <article className='service'>
         <div className="service_head">
-          <h3>Web Development</h3>
+          <h3>Real-Time Chat App</h3>
         </div>
         <ul className='service_list'>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>E-commerce store Using MERN stack as my semester project</p>
+            <p>React Native mobile app with real-time messaging</p>
           </li>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>Sliding puzzle game in javascript, html and css using localstorage</p>
+            <p>WebSocket integration for instant message delivery</p>
           </li>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>Calendar Application to schedule daily tasks in MERN stack with complete user auth.</p>
+            <p>Push notifications and file sharing capabilities</p>
           </li>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>Recipes application in Mern stack using Redux Saga with complete user auth.</p>
+            <p>End-to-end encryption for secure communications</p>
           </li>
-          <li>
-            <BsCheck className='service_list-icon'/>
-            <p>InternsIn Portal for jobs and internships Using ReactJs and Firebase</p>
-          </li>
-          <li>
-            <BsCheck className='service_list-icon'/>
-            <p>Inventory Management System using React JS, Redux Saga, Nest JS, Type ORM, PostgreSql</p>
-          </li>
-          
         </ul>
       </article>
 
       <article className='service'>
         <div className="service_head">
-          <h3>Other</h3>
+          <h3>Task Management System</h3>
         </div>
         <ul className='service_list'>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>Student management System in Java, Swing and SqLite</p>
+            <p>Next.js application with TypeScript and Tailwind CSS</p>
           </li>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>Intruder detection System Using Python and OpenCV</p>
+            <p>Drag-and-drop interface for task organization</p>
           </li>
           <li>
             <BsCheck className='service_list-icon'/>
-            <p>ChatX, a messaging mobile app using React Native and Firebase</p>
+            <p>Team collaboration features with real-time updates</p>
+          </li>
+          <li>
+            <BsCheck className='service_list-icon'/>
+            <p>Calendar integration and deadline tracking</p>
           </li>
         </ul>
       </article>
